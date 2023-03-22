@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package pinger;
+
+option go_package = "proto/pinger";
+
+service Pinger {
+  rpc Ping(Empty) returns (Pong) {}
+
+  rpc PingStream(PingRequest) returns (stream Pong) {}
+}
+
+message Empty {}
+
+message PingRequest {
+  int32 count = 1;
+}
+
+message Pong {
+  string text = 1;
+}
