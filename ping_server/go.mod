@@ -1,4 +1,4 @@
-module github.com/naokirin/grpc_pinger
+module github.com/naokirin/grpc_ping_server
 
 go 1.20
 

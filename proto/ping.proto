@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package pinger;
+package ping;
 
-option go_package = "proto/pinger";
+option go_package = "proto/ping";
 
-service Pinger {
+service PingService {
   rpc Ping(Empty) returns (Pong) {}
 
   rpc PingStream(PingRequest) returns (stream Pong) {}
